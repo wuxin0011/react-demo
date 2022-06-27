@@ -1,0 +1,153 @@
+:root {
+    --active-width: 700px;
+    --input-width: 660px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    font-size: 12px;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #0055ff;
+    color: white;
+    margin: 1px;
+    border-radius: 5px;
+}
+
+.btn-text {
+    background: none;
+    color: #0000ff;
+}
+
+.btn-danger {
+    background-color: #FF0000;
+}
+
+.btn-warning {
+    background-color: #ff5500;
+}
+
+.btn-success {
+    background-color: #4eff2f;
+}
+
+.btn-primary {
+    background-color: #0055ff;
+}
+
+input {
+    margin: 10px;
+    height: 30px;
+    font-size: 16px;
+    outline: none;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+
+
+
+.todolist {
+    height: 450px;
+    overflow: hidden;
+    margin: 100px auto;
+    width: var(--active-width);
+    position: relative;
+    border-radius: 10px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px rgba(0, 0, 0, 0.1), 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+}
+
+.list {
+    position: absolute;
+    top: 120px;
+    max-height: 280px;
+    height: auto;
+    overflow: hidden auto;
+}
+
+.title {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'kaiti';
+}
+
+.title h2 {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.title .search {
+    width: 12.5rem;
+    height: 28px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+
+.todolist input.content {
+    width: var(--input-width);
+    padding-left: 10px;
+}
+
+
+.todolist .item {
+    width: var(--input-width);
+    border: #FF0000 2ps solid;
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.item:hover {
+    background-color: #e5f5ff;
+}
+
+.no-content {
+    font-size: 1.25rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.left,
+.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input.checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    display: inline-flex;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    align-items: center;
+    width: var(--input-width);
+
+}
