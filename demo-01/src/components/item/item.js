@@ -18,7 +18,7 @@ export default class item extends Component {
       return;
     }
     obj.value=result
-    console.log('result,list',list)
+    
     // if(value===result){
     //   alert('修改失败，内容已存在！')
     //   return;

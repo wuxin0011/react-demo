@@ -2,17 +2,12 @@ import React, { Component } from 'react'
 import {removeSelect,question, selectAll,isSelectAll,count} from '../../utils/save'
 
 export default class Footer extends Component {
-
-
-
-
     // 删除已完成
     handleDeleteSelected = ()=>{
         if(!question('确认删除？')){
             return
         }
-        const list = this.props.list
-        removeSelect(list)
+        let list = removeSelect()
         this.props.handleUpdate(list)
     }
 

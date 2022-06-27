@@ -20,15 +20,17 @@ export function clearData() {
 }
 
 
-export function removeSelect(list) {
+export function removeSelect() {
+    let list = getData()
     if (!validArray(list)) {
-        return
+        return new Array()
     }
-    for (let i = 0; i < list.length; i++) {
-        if (list[i].isCheck === true) {
-            list.splice(i, 1)
-        }
-    }
+
+    list = list.filter(item=>{
+        return item&&item.isCheck===false
+    })
+    saveData(list)
+    return list
 
 }
 
@@ -109,8 +111,7 @@ export function isExist(list, active) {
         return false;
     }
     for (let i = 0; i < list.length; i++) {
-        if (list[i].time == active.time && list[i].value === active.value) {
-            console.log('==================>', list[i],active );
+        if (list[i].time == active.time || list[i].value === active.value) {
             return true
         }
     }
@@ -122,7 +123,7 @@ export function isExist(list, active) {
 
 export function count(list) {
     if (!validArray(list)) {
-        return
+        return new Array(0,0)
     }
     let total = list.length
     let finsh = 0
